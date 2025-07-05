@@ -1,0 +1,23 @@
+{
+  "Data Analyst": ["excel", "sql", "python", "tableau", "power bi", "data analysis", "data visualization"],
+  "Software Engineer": ["java", "c++", "python", "data structures", "algorithms", "software development", "problem solving"],
+  "Web Developer": ["html", "css", "javascript", "react", "node.js", "web development", "responsive design"],
+  "Backend Developer": ["python", "django", "flask", "sql", "rest api", "mongodb"],
+  "Frontend Developer": ["html", "css", "javascript", "react", "bootstrap", "ui"],
+  "Machine Learning Engineer": ["python", "scikit-learn", "pandas", "numpy", "ml", "model","tensorflow","keras","machine learning"],
+  "AI Engineer": ["python", "tensorflow", "keras", "pytorch", "deep learning", "neural networks", "natural language processing"],
+  "Business Analyst": ["excel", "sql", "data analysis", "business intelligence", "power bi", "tableau", "requirements gathering"],
+  "Project Manager": ["project management", "agile", "scrum", "stakeholder management", "risk management", "communication skills"],
+  "Quality Assurance Engineer": ["testing", "automation", "selenium", "quality assurance", "bug tracking", "testing methodologies"],
+  "Data Scientist": ["python", "pandas", "numpy", "machine learning", "data analysis", "statistics"],
+  "Full Stack Developer": ["html", "css", "javascript", "react", "node.js", "express", "mongodb"],
+  "Mobile App Developer": ["android", "kotlin", "java", "flutter", "react native", "mobile development"],
+  "Cloud Engineer": ["aws", "azure", "gcp", "cloud computing", "docker", "kubernetes"],
+  "Cybersecurity Analyst": ["cybersecurity", "network security", "penetration testing", "firewalls", "encryption", "incident response"],
+  "Database Administrator": ["sql", "mysql", "postgresql", "oracle", "database management", "data modeling"],
+  "Network Engineer": ["networking", "tcp/ip", "routing", "switching", "firewalls", "network security"],
+  "Systems Administrator": ["linux", "windows server", "networking", "virtualization", "shell scripting", "system administration"],
+  "UI/UX Designer": ["ui design", "ux design", "adobe xd", "figma", "user research", "prototyping"],
+  "Game Developer": ["unity", "unreal engine", "c#", "game design", "3d modeling", "game development"],
+  "DevOps Engineer": ["aws", "docker", "kubernetes", "linux", "jenkins", "ci/cd"]
+}

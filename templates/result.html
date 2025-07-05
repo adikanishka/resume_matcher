@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Match Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Analysis Results</h1>
+        <p>Here are the top job roles that match your resume:</p>
+    <h1>Top Matching Job Roles</h1>
+
+    {% if roles %}
+        <ul>
+            {% for role, score in roles %}
+                <li><strong>{{ role }}</strong> (Match Score: {{ score }})</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No matching roles found.</p>
+    {% endif %}
+
+    <hr>
+
+    <h2> Resume Improvement Suggestions</h2>
+    {% if tips %}
+        <ul>
+            {% for tip in tips %}
+                <li>{{ tip }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Your resume looks strong! 🎉</p>
+    {% endif %}
+    <hr>
+    <h2>🔍 What We Detected in Your Resume</h2>
+
+    {% if orgs %}
+        <h3>🏢 Organizations:</h3>
+        <ul>
+            {% for org in orgs %}
+                <li>{{ org.title() }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if degrees %}
+        <h3>🎓 Degrees/Certifications:</h3>
+        <ul>
+            {% for degree in degrees %}
+                <li>{{ degree.title() }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <hr>
+    <h2>Suggested Skills to Add</h2>
+    {% if suggestions %}
+        {% for role, skills in suggestions.items() %}
+            <h3>📌 For {{ role }}:</h3>
+            <ul class="tip-list">
+                {% for skill in skills %}
+                    <li>{{ skill.title() }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    {% else %}
+        <p>Great! Your resume already contains the most relevant skills.</p>
+    {% endif %}
+    <hr>
+    <h2>Top Skill Match</h2>
+    <canvas id="matchChart" width="400" height="200"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    const ctx = document.getElementById('matchChart').getContext('2d');
+    const matchChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: {{ chart_labels | tojson }},
+            datasets: [{
+                label: 'Match Score',
+                data: {{ chart_values | tojson }},
+                backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true,
+                }
+            }
+        }
+    }); 
+</script>
+
+<hr>
+<a href="/">🔙 Upload Another Resume</a>
+    </div>
+</body>
+</html>

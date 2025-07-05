@@ -1,0 +1,67 @@
+[
+  {
+    "type": "keyword_absence",
+    "keywords": ["sql", "git", "linux"],
+    "tip": "Mention core tools like SQL, Git, or Linux to strengthen your technical profile."
+  },
+  {
+    "type": "section_absence",
+    "keyword": "project",
+    "tip": "Include a 'Projects' section to highlight real-world applications."
+  },
+  {
+    "type": "soft_skills_absence",
+    "keywords": ["teamwork", "leadership", "communication"],
+    "tip": "Highlight soft skills like teamwork, communication, or leadership."
+  },
+  {
+    "type": "formatting_check",
+    "regex": "^[^•\\-*]",
+    "tip": "Consider using bullet points (•, -, *) for better formatting."
+  },
+  {
+    "type": "length_check",
+    "max_length": 2000,
+    "tip": "Keep your resume concise, ideally under 2 pages or 2000 words."
+  },
+  {
+    "type": "keyword_presence",
+    "keywords": ["python", "data analysis", "machine learning"],
+    "tip": "Ensure key skills like Python, data analysis, or machine learning are prominently featured."
+  },
+  {
+    "type": "section_presence",
+    "keyword": "education",
+    "tip": "Include an 'Education' section to showcase your academic background."
+  },
+  {
+    "type": "experience_section_check",
+    "presence": true,
+    "tip": "Make sure to include a detailed 'Experience' section."
+  },
+  {
+    "type": "skills_section_check",
+    "presence": true,
+    "tip": "Include a 'Skills' section to list your technical and soft skills."
+  },
+  {
+    "type": "contact_info_check",
+    "presence": true,
+    "tip": "Ensure your contact information is clearly visible at the top."
+  },
+    {
+        "type": "certifications_section_check",
+        "presence": true,
+        "tip": "Include a 'Certifications' section to highlight relevant certifications."
+    },
+    {
+        "type": "language_skills_check",
+        "presence": true,
+        "tip": "If applicable, include a section for language skills."
+    },
+    {
+        "type": "custom_section_check",
+        "presence": true,
+        "tip": "If you have unique sections like 'Publications' or 'Volunteer Work', include them."
+    }
+]
